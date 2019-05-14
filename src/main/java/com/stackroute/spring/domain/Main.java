@@ -11,9 +11,11 @@ public class Main {
     public static void main(String[] args) {
 
         // Task-1 using Application context
-        ApplicationContext bean=new ClassPathXmlApplicationContext("constructor.xml");
-        Movie movie =(Movie)bean.getBean("bean-1");
+        ApplicationContext bean3=new ClassPathXmlApplicationContext("autowire.xml");
+        Movie movie =(Movie)bean3.getBean("bean-1");
         System.out.println(movie.getActor());
+
+        System.out.println(movie.toString());
 
 
     }
