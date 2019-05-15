@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Task-1 using Application context
-        ApplicationContext bean3=new ClassPathXmlApplicationContext("autowire.xml");
+        ApplicationContext bean3=new ClassPathXmlApplicationContext("awareinterface.xml");
         Movie movie =(Movie)bean3.getBean("bean-1");
         System.out.println(movie.getActor());
 
