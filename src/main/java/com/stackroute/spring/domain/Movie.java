@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.beans.factory.annotation.Autowired;
-
-public class Movie implements ApplicationContextAware{
+import org.springframework.beans.factory.annotation.Autowired;
+public class Movie{
     private Actor actor;
 
 
@@ -18,7 +18,7 @@ public class Movie implements ApplicationContextAware{
         return actor;
     }
 
-    @Autowired
+
     public Movie(Actor actor){
 
         this.actor=actor;
@@ -34,10 +34,5 @@ public class Movie implements ApplicationContextAware{
                 "actor='" + actor + '\'' +
                 '}';
     }
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println(applicationContext);
-        Actor actor=(Actor)applicationContext.getBean("actor");
-        System.out.println(actor);
-    }
+
 }
